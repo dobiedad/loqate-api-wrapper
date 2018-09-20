@@ -1,0 +1,17 @@
+{
+  "name": "loqate-api-wrapper",
+  "version": "1.0.0",
+  "description": "loqate api wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "loqate"
+  ],
+  "author": "dobiedad",
+  "license": "ISC",
+  "dependencies": {
+    "httpism": "^3.10.0"
+  }
+}
