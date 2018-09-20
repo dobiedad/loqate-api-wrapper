@@ -1,16 +1,17 @@
 const httpism = require("httpism");
 
 module.exports = class LoqateApi {
-  constructor(key) {
+  constructor({ key, countries }) {
     this._key = key;
     this._client = httpism.client(
       "https://api.addressy.com/Capture/Interactive/"
     );
+    this._countries = countries || [];
   }
 
   async searchAddresses(query) {
     const response = await this.fetch("Find", {
-      params: { Text: query, Countries: ["US"] }
+      params: { Text: query, Countries: this._countries }
     });
     return response.Items.filter(item => item.Type === "Address");
   }

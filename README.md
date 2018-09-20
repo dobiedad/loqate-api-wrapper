@@ -9,7 +9,10 @@
 ```
 const LoqateApi = require("loqate-api-wrapper");
 
-this.api = new LoqateApi(process.env.LOQATE_API_KEY);
+this.api = new LoqateApi({
+  key:process.env.LOQATE_API_KEY,
+  countries:['US']
+});
 ```
 
 ## Search Addresses
